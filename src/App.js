@@ -32,5 +32,6 @@ function App() {
   );
 }
 
+// TESTS for the stretch goals
 
 export default App;
