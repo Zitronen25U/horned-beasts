@@ -23,11 +23,14 @@ class HornedBeasts extends React.Component {
       <>
       {data.map(value => 
         <div> 
-        <h2>{value.title}</h2>
-
-        <img  id={value.title} src= {value.image_url} alt={value.keyword} height="200" width="200"></img>
-        <p>{value.description}</p>
-        <Button onClick={this.voteForABeast}  variant="secondary">CLICK ME IF I'M YOUR FAVORITE</Button>{'👍' + this.state.beastVotes}
+          <ol>
+            <li>
+              <h2>{value.title}</h2>
+              <img  id={value.title} src= {value.image_url} alt={value.keyword} height="200" width="200"></img>
+              <p>{value.description}</p>
+              <Button onClick={this.voteForABeast}  variant="secondary">CLICK ME IF I'M YOUR FAVORITE</Button>{'👍' + this.state.beastVotes}
+            </li>
+          </ol>
         </div>
         )
       } 
