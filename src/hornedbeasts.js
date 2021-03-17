@@ -25,7 +25,7 @@ class HornedBeasts extends React.Component {
         <img onClick={this.voteForABeast} id={value.title} src= {value.image_url} alt={value.keyword} height="200" width="200"></img>
 
         <p>{value.description}</p>
-        <div>👍</div>
+        <div>👍 {this.state.beastVotes}</div>
         </div>
         )
       } 
