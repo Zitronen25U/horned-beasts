@@ -1,6 +1,6 @@
 import React from 'react';
-import data from './data.json';
-import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 
 
 class HornedBeasts extends React.Component {
@@ -9,28 +9,37 @@ class HornedBeasts extends React.Component {
     super(props);
     this.state = {
       beastVotes: 0,
-      imageNumber: 1
     }
   };
 
   voteForABeast = () => {
     this.setState({beastVotes: this.state.beastVotes + 1});
   }
-
+  
   render() {
     return (
-
       <>
-      {data.map(value => 
-        <div> 
-        <h2>{value.title}</h2>
-
-        <img  id={value.title} src= {value.image_url} alt={value.keyword} height="200" width="200"></img>
-        <p>{value.description}</p>
-        <Button onClick={this.voteForABeast}  variant="secondary">CLICK ME IF I'M YOUR FAVORITE</Button>{'👍' + this.state.beastVotes}
-        </div>
-        )
-      } 
+      <Card 
+      style={{ width: '20rem' }}
+      bg="primary"
+      text="warning"
+      className="beastImages"
+      onClick={this.voteForABeast}
+      >
+        <Card.Img variant="bottom" src={this.props.src}/>
+        <Card.Body>
+          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Text>
+            CLICK ME IF I'M YOUR FAVORITE BEAST
+          </Card.Text>
+          <Card.Text>
+          👍 = {this.state.beastVotes}
+          </Card.Text>
+          <Card.Text>
+            {this.props.description}
+          </Card.Text>
+        </Card.Body>
+      </Card>
       </>
     );
   }
