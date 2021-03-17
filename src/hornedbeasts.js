@@ -1,8 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-
-
 class HornedBeasts extends React.Component {
 
   constructor(props){
@@ -15,7 +13,7 @@ class HornedBeasts extends React.Component {
   voteForABeast = () => {
     this.setState({beastVotes: this.state.beastVotes + 1});
   }
-  
+
   render() {
     return (
       <>

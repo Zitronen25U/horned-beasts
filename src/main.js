@@ -1,6 +1,6 @@
 import React from 'react';
 import HornedBeasts from './hornedbeasts';
-import data from './data.json';
+import data from './data.json'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardColumns from 'react-bootstrap/CardColumns'
 
