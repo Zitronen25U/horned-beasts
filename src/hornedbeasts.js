@@ -1,13 +1,15 @@
 import React from 'react';
 import data from './data.json';
-// import title from './data.json';
+import Button from 'react-bootstrap/Button';
+
 
 class HornedBeasts extends React.Component {
 
   constructor(props){
     super(props);
     this.state = {
-      beastVotes: 0
+      beastVotes: 0,
+      imageNumber: 1
     }
   };
 
@@ -17,15 +19,15 @@ class HornedBeasts extends React.Component {
 
   render() {
     return (
+
       <>
       {data.map(value => 
         <div> 
         <h2>{value.title}</h2>
 
-        <img onClick={this.voteForABeast} id={value.title} src= {value.image_url} alt={value.keyword} height="200" width="200"></img>
-
+        <img  id={value.title} src= {value.image_url} alt={value.keyword} height="200" width="200"></img>
         <p>{value.description}</p>
-        <div>👍 {this.state.beastVotes}</div>
+        <Button onClick={this.voteForABeast}  variant="secondary">CLICK ME IF I'M YOUR FAVORITE</Button>{'👍' + this.state.beastVotes}
         </div>
         )
       } 
