@@ -20,7 +20,6 @@ class SelectedBeast extends React.Component{
           <Button variant="primary">Save changes</Button>
         </Modal.Footer>
        </Modal.Dialog>
-
     </div>
 
   }
