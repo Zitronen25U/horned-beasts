@@ -4,11 +4,7 @@ import Form from 'react-bootstrap/Form'
 
 class HornForm extends React.Component{
 
-  HornSorter = () => {
-    if(this.props.horns  2){
-      
-    }
-  }
+
   
   render(){
     return(

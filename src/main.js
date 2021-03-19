@@ -15,6 +15,7 @@ class Main extends React.Component {
       description={beasts.description}
       index={index}
       handleShow={this.props.handleShow}
+      horns={beasts.horns}
       />
       )}
       </>
