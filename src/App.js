@@ -5,6 +5,7 @@ import Main from './main';
 import SelectedBeast from './SelectedBeast';
 import data from './data.json'
 import React from 'react';
+import HornForm from './HornForm';
 
 class App extends React.Component {
   constructor(props){
